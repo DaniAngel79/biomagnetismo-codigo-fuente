@@ -1,0 +1,92 @@
+/* Main App Styles - Biomagnetismo Store */
+
+/* Section transitions */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image hover effects */
+.img-hover {
+  transition: transform 0.5s ease-out;
+}
+
+.img-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: all 0.3s ease-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(47, 79, 79, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-300;
+  @apply hover:scale-105 hover:shadow-lg hover:shadow-primary/20;
+}
+
+.btn-secondary {
+  @apply bg-secondary/20 text-foreground px-8 py-3 rounded-full font-medium transition-all duration-300;
+  @apply hover:bg-secondary/40 hover:scale-105;
+}
+
+/* Text gradient - only for decorative elements, not headings */
+.text-gradient-accent {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Organic shapes */
+.organic-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--border)),
+    transparent
+  );
+}
+
+/* Responsive container */
+.container-custom {
+  @apply max-w-7xl mx-auto px-6 md:px-12;
+}
+
+/* Navigation active state */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: hsl(var(--primary));
+  transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Decorative leaf pattern */
+.leaf-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232F4F4F' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
