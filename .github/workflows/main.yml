@@ -1,17 +1,18 @@
-name: Despliegue Automático
+name: Despliegue a Hostinger
 on:
   push:
     branches: [ "main" ]
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Install and Build
+      - name: Descargar código
+        uses: actions/checkout@v4
+      - name: Instalar y Compilar
         run: |
           npm install
           npm run build
-      - name: Deploy to Hostinger
+      - name: Subir a Hostinger vía FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
