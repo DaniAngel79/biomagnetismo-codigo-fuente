@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { Award, MapPin, Clock, GraduationCap } from "lucide-react";
+import { Award, MapPin, Clock, GraduationCap, ShieldCheck } from "lucide-react";
 
 const About = () => {
   const credentials = [
@@ -11,123 +11,92 @@ const About = () => {
     },
     {
       icon: Award,
-      title: "Certificación",
-      description: "Bioenergía magnética por Lic. Alonso Hernández Cedillo",
+      title: "Certificación Oficial",
+      description: "Bioenergía Magnética - Lic. Alonso Hernández Cedillo",
     },
     {
       icon: Clock,
-      title: "Experiencia",
+      title: "Trayectoria",
       description: "9 años de práctica profesional",
     },
     {
       icon: MapPin,
-      title: "Ubicación",
+      title: "Consultorio",
       description: "Alta Gracia, Córdoba, Argentina",
     },
   ];
 
   return (
-    <section
-      id="sobre-mi"
-      className="py-24 lg:py-32"
-      data-testid="about-section"
-    >
-      <div className="container-custom">
+    <section id="sobre-mi" className="py-24 lg:py-32 bg-white overflow-hidden" data-testid="about-section">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image - Par Cervical Sacro original */}
-          <div className="relative animate-fade-in-up">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 bg-white">
+          
+          {/* Imagen - Par Cervical Sacro (Optimización SEO/LCP) */}
+          <div className="relative">
+            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-slate-50">
               <img
                 src="https://biomagnetismo.store/wp-content/uploads/2026/02/Par-cervical-sacro.webp"
-                alt="Par Cervical-Sacro: Equilibrio del sistema nervioso y regulación orgánica"
+                alt="Esquema de equilibrio bioenergético: Par Cervical-Sacro"
                 className="w-full h-[400px] lg:h-[500px] object-contain"
-                data-testid="about-image"
+                loading="lazy"
+                width="600"
+                height="500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/5 to-transparent" />
             </div>
 
             {/* Experience Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl">
-              <p className="text-4xl font-heading font-bold">9+</p>
-              <p className="text-sm opacity-90">Años de experiencia</p>
+            <div className="absolute -bottom-6 -right-2 md:-right-6 bg-emerald-600 text-white p-6 rounded-2xl shadow-xl border-4 border-white">
+              <p className="text-4xl font-bold tracking-tighter">9+</p>
+              <p className="text-xs uppercase font-black tracking-widest opacity-90">Años de Práctica</p>
             </div>
-
-            {/* Decorative Element */}
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent/30 rounded-full blur-2xl" />
           </div>
 
           {/* Content */}
-          <div className="space-y-8 animate-fade-in-up animation-delay-200">
-            <div>
-              <span className="text-sm font-medium tracking-widest uppercase text-primary mb-4 block">
-                Sobre Mí
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <span className="text-xs font-black tracking-[0.2em] uppercase text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+                Especialista Certificado
               </span>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
                 Daniel Rosa
               </h2>
-              <p className="text-xl text-primary font-medium mb-4">
-                Terapeuta en Biomagnetismo y Flores de Bach
+              <p className="text-xl text-emerald-700 font-medium italic">
+                Terapeuta en Biomagnetismo y Sistemas Florales
               </p>
             </div>
 
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-slate-600 leading-relaxed text-base md:text-lg">
               <p>
-                Soy Daniel Rosa, terapeuta especializado en biomagnetismo,
-                residenciado en Alta Gracia, Córdoba, donde se encuentra mi
-                consultorio. He recibido formación en diversas academias
-                internacionales en México y España, destacando mi certificación
-                en bioenergía magnética por el licenciado Alonso Hernández
-                Cedillo.
+                Residente en <strong>Alta Gracia, Córdoba</strong>, he dedicado casi una década al estudio de la energía humana. Mi formación se ha consolidado en academias internacionales de <strong>México y España</strong>, obteniendo la certificación en Bioenergía Magnética de la mano del Lic. Alonso Hernández Cedillo.
               </p>
               <p>
-                Con nueve años de experiencia en esta hermosa profesión, he sido
-                testigo de transformaciones significativas en la salud de mis
-                consultantes. He ayudado a personas a liberarse de dolores y
-                síntomas debilitantes, así como a mejorar su bienestar general.
+                A lo largo de estos nueve años, he acompañado a numerosos consultantes en su camino hacia el <strong>equilibrio bioenergético</strong>, facilitando procesos de armonización natural que promueven un estado de confort y vitalidad renovada.
               </p>
-              <p>
-                Mi compromiso con la terapia es profundo; creo firmemente que
-                esta práctica debería ser explorada por todos, ya que todos
-                somos energía.
+              <p className="bg-slate-50 p-4 rounded-xl border-l-4 border-emerald-500 italic text-slate-500">
+                "Entiendo el bienestar como un flujo armónico de energía; mi compromiso es ayudarte a restaurar ese equilibrio para mejorar tu calidad de vida diaria."
               </p>
             </div>
 
             {/* Credentials Grid */}
-            <div className="grid sm:grid-cols-2 gap-4 pt-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               {credentials.map((credential) => (
-                <div
-                  key={credential.title}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-muted/50"
-                  data-testid={`credential-${credential.title.toLowerCase().replace(' ', '-')}`}
-                >
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <credential.icon className="text-primary" size={20} />
+                <div key={credential.title} className="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-md transition-all">
+                  <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                    <credential.icon className="text-emerald-600" size={20} />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground text-sm">
-                      {credential.title}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      {credential.description}
-                    </p>
+                    <p className="font-bold text-slate-900 text-sm">{credential.title}</p>
+                    <p className="text-xs text-slate-500 leading-tight">{credential.description}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* CTA */}
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
-              data-testid="about-cta"
-            >
-              <a
-                href="https://wa.me/5493547446076?text=Hola,%20quisiera%20un%20turno%20para%20la%20terapia%20de%20biomagnetismo.%20Mi%20nombre%20es%20"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contactar para Consulta
+            {/* CTA SEGURO */}
+            <Button asChild size="lg" className="bg-slate-900 hover:bg-emerald-600 text-white rounded-full px-10 py-7 text-lg font-bold shadow-xl transition-all hover:scale-105 group">
+              <a href="https://wa.me/5493547446076?text=Hola%20Daniel,%20quisiera%20consultar%20por%20un%20turno.">
+                Solicitar Entrevista de Evaluación <ShieldCheck className="ml-2 group-hover:animate-pulse" size={20} />
               </a>
             </Button>
           </div>

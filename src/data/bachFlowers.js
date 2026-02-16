@@ -1,4 +1,3 @@
-// src/data/bachFlowers.js
 export const BACH_FLOWERS_DATA = [
   {
     id: "agrimony",
@@ -6,9 +5,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Agrimonia eupatoria",
     spanish: "Agrimonia",
     group: "Hipersensibilidad",
-    negative: "Angustiado, atormentado internamente. Oculta sus sufrimientos tras una máscara de alegría. Teme la soledad y puede recurrir a adicciones para evadirse.",
-    positive: "Paz interior real. Capacidad de integrar los problemas con serenidad y mostrarse tal cual es.",
-    therapeutic: "Ansiolítico natural. Útil en bruxismo, adicciones y opresión en el pecho."
+    negative: "Oculta sufrimientos tras una máscara de alegría. Evita la soledad y busca evasión.",
+    positive: "Paz interior real. Capacidad de integrar desafíos con serenidad y autenticidad.",
+    considerations: "Acompaña estados de inquietud interna, tensión mandibular y hábitos de evasión."
   },
   {
     id: "aspen",
@@ -16,9 +15,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Populus tremula",
     spanish: "Álamo temblón",
     group: "Miedo",
-    negative: "Miedos de origen desconocido, presagios, miedo a la oscuridad o a lo sobrenatural. Aprensión sin causa.",
-    positive: "Confianza y seguridad ante lo desconocido. Coraje basado en la comprensión espiritual.",
-    therapeutic: "Pesadillas, insomnio por miedo, temblores nerviosos."
+    negative: "Aprensión sin causa conocida, presagios o miedos imprecisos ante lo desconocido.",
+    positive: "Confianza y seguridad. Coraje basado en la calma interna y la protección.",
+    considerations: "Ideal para el descanso nocturno inquieto y la sensación de vulnerabilidad emocional."
   },
   {
     id: "beech",
@@ -26,9 +25,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Fagus sylvatica",
     spanish: "Haya",
     group: "Preocupación por otros",
-    negative: "Intolerancia, crítica constante hacia los demás. Incapacidad para ver el punto de vista ajeno. Arrogancia.",
-    positive: "Tolerancia, humildad y comprensión de las diferentes formas de ser y actuar.",
-    therapeutic: "Alergias, problemas digestivos por irritación, tensión en cuello y hombros."
+    negative: "Tendencia a la crítica y la intolerancia. Dificultad para comprender otros puntos de vista.",
+    positive: "Tolerancia, humildad y empatía hacia las diferencias ajenas.",
+    considerations: "Fomenta la relajación en zonas de tensión cervical y mejora la tolerancia digestiva."
   },
   {
     id: "centaury",
@@ -36,9 +35,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Centaurium umbellatum",
     spanish: "Centaura",
     group: "Hipersensibilidad",
-    negative: "Dificultad para decir 'no'. Voluntad débil, sometimiento a los deseos de otros. Se agota por servir.",
-    positive: "Servir con sabiduría y límites. Fortalecimiento de la voluntad propia y la individualidad.",
-    therapeutic: "Astenia, convalecencia, debilidad física y cansancio crónico."
+    negative: "Dificultad para poner límites. Voluntad débil y tendencia al sometimiento por agradar.",
+    positive: "Fortaleza de la voluntad propia. Capacidad de servir con sabiduría y límites sanos.",
+    considerations: "Útil en periodos de debilidad física o fatiga por exceso de entrega a los demás."
   },
   {
     id: "cerato",
@@ -46,9 +45,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Ceratostigma willmottiana",
     spanish: "Ceratostigma",
     group: "Incertidumbre",
-    negative: "Busca consejo constantemente. Desconfía de su propia intuición. Cambia de opinión según lo que dicen otros.",
-    positive: "Confianza en el juicio propio. Intuición clara y seguridad en las decisiones tomadas.",
-    therapeutic: "Falta de concentración, inmadurez, dispersión mental."
+    negative: "Busca consejo constantemente por desconfianza en su propia intuición.",
+    positive: "Confianza en el juicio propio. Intuición clara y seguridad en las decisiones.",
+    considerations: "Acompaña procesos de dispersión mental y falta de enfoque en objetivos."
   },
   {
     id: "cherry-plum",
@@ -56,9 +55,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Prunus cerasifera",
     spanish: "Cerasífera",
     group: "Miedo",
-    negative: "Miedo a perder el control mental o físico. Impulsos incontrolables. Desesperación extrema.",
-    positive: "Calma profunda bajo presión. Control emocional y serenidad en situaciones límite.",
-    therapeutic: "Tics, descontrol de esfínteres, arrebatos de ira, Parkinson."
+    negative: "Miedo a perder el control emocional. Impulsividad o desesperación intensa.",
+    positive: "Control emocional y serenidad profunda incluso en situaciones de gran presión.",
+    considerations: "Acompaña estados de tensión nerviosa extrema y descontrol de impulsos físicos."
   },
   {
     id: "chestnut-bud",
@@ -66,9 +65,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Aesculus hippocastanum",
     spanish: "Brote de Castaño",
     group: "Falta de interés",
-    negative: "Repetición de errores. No aprende de la experiencia. Falta de observación del presente.",
-    positive: "Aprendizaje rápido de la vida. Observación aguda y aprovechamiento de las lecciones pasadas.",
-    therapeutic: "Dificultades de aprendizaje, falta de atención, retrasos madurativos."
+    negative: "Repetición de errores por falta de observación. No aprende de la experiencia.",
+    positive: "Aprendizaje rápido. Capacidad de asimilar lecciones y avanzar con sabiduría.",
+    considerations: "Fomenta la atención en el presente y el aprendizaje en procesos de desarrollo."
   },
   {
     id: "chicory",
@@ -76,9 +75,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Cichorium intybus",
     spanish: "Achicoria",
     group: "Preocupación por otros",
-    negative: "Posevidad, manipulación afectiva, chantaje emocional. Necesita ser necesitado.",
-    positive: "Amor incondicional y desinteresado. Capacidad de dar sin esperar nada a cambio.",
-    therapeutic: "Problemas ginecológicos, congestión venosa, estreñimiento."
+    negative: "Posevidad y manipulación afectiva. Necesidad excesiva de atención y control.",
+    positive: "Amor incondicional y desinteresado. Capacidad de dar libertad a los seres queridos.",
+    considerations: "Relaja tensiones asociadas a la congestión emocional y el estancamiento circulatorio."
   },
   {
     id: "clematis",
@@ -86,9 +85,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Clematis vitalba",
     spanish: "Clemátide",
     group: "Falta de interés",
-    negative: "Soñador, distraído, falta de interés por el presente. Tendencia a la evasión o al desmayo.",
-    positive: "Creatividad manifestada en la realidad. Presencia, atención y realismo.",
-    therapeutic: "Problemas de vista u oído, somnolencia, desmayos."
+    negative: "Soñador, distraído, falta de interés por el presente. Tendencia a la evasión mental.",
+    positive: "Creatividad manifestada en la realidad. Presencia, atención y realismo práctico.",
+    considerations: "Ayuda en la somnolencia y la falta de nitidez en los sentidos por distracción."
   },
   {
     id: "crab-apple",
@@ -96,9 +95,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Malus pumila",
     spanish: "Manzano silvestre",
     group: "Abatimiento",
-    negative: "Sentimiento de impureza. Obsesión por la limpieza o defectos físicos menores. Autorrechazo.",
-    positive: "Aceptación de uno mismo. Purificación mental y física. Sentido de la proporción.",
-    therapeutic: "Problemas de piel, desintoxicación, infecciones, anorexia."
+    negative: "Sentimiento de impureza o autorrechazo. Obsesión por detalles físicos o limpieza.",
+    positive: "Aceptación de uno mismo. Purificación mental y sentido de la proporción.",
+    considerations: "Promueve el bienestar cutáneo y acompaña procesos de desintoxicación."
   },
   {
     id: "elm",
@@ -106,9 +105,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Ulmus procera",
     spanish: "Olmo",
     group: "Abatimiento",
-    negative: "Abrumado por las responsabilidades. Sensación momentánea de incapacidad frente a las tareas.",
-    positive: "Seguridad en las propias capacidades. Delegar tareas y reconocer límites.",
-    therapeutic: "Dolores agudos desbordantes, crisis de estrés por trabajo."
+    negative: "Abrumado por las responsabilidades. Sensación temporal de incapacidad ante las tareas.",
+    positive: "Seguridad en las capacidades. Capacidad de delegar y reconocer los límites.",
+    considerations: "Acompaña crisis de estrés por sobrecarga laboral o familiar intensa."
   },
   {
     id: "gentian",
@@ -116,9 +115,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Gentiana amarella",
     spanish: "Genciana",
     group: "Incertidumbre",
-    negative: "Desánimo tras un obstáculo. Pesimismo fácil. Duda de la recuperación o del éxito.",
-    positive: "Perseverancia y fe. Comprensión de que los obstáculos son parte del proceso.",
-    therapeutic: "Depresión de causa conocida, convalecencias lentas."
+    negative: "Desánimo fácil ante obstáculos. Pesimismo y duda sobre los resultados positivos.",
+    positive: "Perseverancia y fe. Comprensión de que los retos son parte del progreso.",
+    considerations: "Apoya en convalecencias lentas y estados de desánimo por causas conocidas."
   },
   {
     id: "gorse",
@@ -126,9 +125,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Ulex europaeus",
     spanish: "Aulaga",
     group: "Incertidumbre",
-    negative: "Desesperanza total. Siente que no hay solución. Se rinde ante la enfermedad o el destino.",
-    positive: "Recuperación de la esperanza. Voluntad de intentar de nuevo con fe.",
-    therapeutic: "Enfermedades crónicas, estados de abandono personal."
+    negative: "Desesperanza total. Sensación de que nada puede mejorar su situación.",
+    positive: "Recuperación de la esperanza y la voluntad de seguir adelante con fe.",
+    considerations: "Ideal para situaciones crónicas donde se ha perdido el impulso vital."
   },
   {
     id: "heather",
@@ -136,9 +135,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Calluna vulgaris",
     spanish: "Brezo",
     group: "Soledad",
-    negative: "Centrado en sí mismo. Necesita público constante para hablar de sus problemas. No escucha.",
-    positive: "Empatía y escucha. Capacidad de ser un buen compañero y comprender a otros.",
-    therapeutic: "Hipocondría, ansiedad por soledad, verborrea."
+    negative: "Centrado en sí mismo. Necesita público constante. Dificultad para estar solo.",
+    positive: "Empatía y escucha activa. Capacidad de dar y recibir en equilibrio.",
+    considerations: "Acompaña la ansiedad por soledad y la necesidad de comunicación excesiva."
   },
   {
     id: "holly",
@@ -146,9 +145,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Ilex aquifolium",
     spanish: "Acebo",
     group: "Hipersensibilidad",
-    negative: "Odio, envidia, celos, sospecha. Sentimientos de venganza o ira interna.",
-    positive: "Amor universal. Apertura del corazón y generosidad emocional.",
-    therapeutic: "Ira explosiva, procesos febriles, taquicardias."
+    negative: "Odio, envidia, celos o sospecha. Sentimientos de ira interna intensa.",
+    positive: "Amor universal y apertura emocional. Generosidad y paz de corazón.",
+    considerations: "Fomenta la calma en reacciones explosivas y estados de calor corporal interno."
   },
   {
     id: "honeysuckle",
@@ -156,9 +155,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Lonicera caprifolium",
     spanish: "Madreselva",
     group: "Falta de interés",
-    negative: "Nostalgia excesiva. Vivir en el pasado. Dificultad para aceptar el paso del tiempo.",
-    positive: "Vivir en el presente usando la experiencia del pasado para progresar.",
-    therapeutic: "Duelos, mudanzas traumáticas, envejecimiento difícil."
+    negative: "Nostalgia excesiva. Vivir anclado en el pasado, dificultad para aceptar cambios.",
+    positive: "Vivir plenamente el presente integrando las experiencias pasadas con sabiduría.",
+    considerations: "Acompaña procesos de duelo, mudanzas o cambios de etapa vital."
   },
   {
     id: "hornbeam",
@@ -166,9 +165,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Carpinus betulus",
     spanish: "Hojaranzo",
     group: "Incertidumbre",
-    negative: "Pereza mental. Cansancio antes de empezar la tarea. Sensación de falta de energía.",
-    positive: "Vitalidad mental. Frescura y entusiasmo para afrontar el día a día.",
-    therapeutic: "Debilidad muscular localizada, laxitud, ojos cansados."
+    negative: "Pereza mental. Cansancio ante la idea de empezar el día o la tarea.",
+    positive: "Vitalidad y entusiasmo mental. Frescura para afrontar la rutina diaria.",
+    considerations: "Fomenta la firmeza en tejidos y ayuda en la sensación de laxitud física."
   },
   {
     id: "impatiens",
@@ -176,9 +175,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Impatiens glandulifera",
     spanish: "Impaciencia",
     group: "Soledad",
-    negative: "Prisa constante, irritabilidad por el ritmo ajeno. Tensión nerviosa extrema.",
-    positive: "Paciencia y ritmo armonioso. Aceptación del tiempo de los demás.",
-    therapeutic: "Dolores agudos, estrés, eyaculación precoz, insomnio."
+    negative: "Prisa constante e irritabilidad por la lentitud ajena. Tensión nerviosa extrema.",
+    positive: "Paciencia y ritmo armonioso. Aceptación de los tiempos de los demás.",
+    considerations: "Relaja tensiones musculares agudas y estados de inquietud motora."
   },
   {
     id: "larch",
@@ -186,9 +185,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Larix decidua",
     spanish: "Alerce",
     group: "Abatimiento",
-    negative: "Expectativa de fracaso. Sentimiento de inferioridad. No intenta por miedo a fallar.",
-    positive: "Capacidad de actuar y arriesgarse. Confianza en el éxito personal.",
-    therapeutic: "Fobias, impotencia, problemas de columna por desvalorización."
+    negative: "Expectativa de fracaso. Sentimiento de inferioridad que impide la acción.",
+    positive: "Capacidad de actuar con confianza. Reconocimiento del valor personal.",
+    considerations: "Acompaña procesos de desvalorización y fomenta la seguridad al hablar en público."
   },
   {
     id: "mimulus",
@@ -196,9 +195,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Mimulus guttatus",
     spanish: "Mímulo",
     group: "Miedo",
-    negative: "Miedos concretos (dinero, enfermedad, accidentes). Timidez y retraimiento social.",
-    positive: "Valentía silenciosa. Capacidad de enfrentar las pruebas del mundo con calma.",
-    therapeutic: "Miedos conocidos, tartamudez, hipersensibilidad al ruido o luz."
+    negative: "Miedos concretos y conocidos (dinero, soledad, accidentes). Timidez social.",
+    positive: "Valentía silenciosa. Capacidad de enfrentar las pruebas cotidianas con calma.",
+    considerations: "Acompaña la sensibilidad excesiva al ruido, la luz o el entorno social."
   },
   {
     id: "mustard",
@@ -206,9 +205,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Sinapis arvensis",
     spanish: "Mostaza",
     group: "Falta de interés",
-    negative: "Depresión profunda que viene y se va sin causa externa. Tristeza sombría y repentina.",
-    positive: "Estabilidad emocional y alegría interior que no depende de las circunstancias.",
-    therapeutic: "Depresión endógena, melancolía cíclica."
+    negative: "Tristeza profunda y repentina que aparece y desaparece sin causa externa clara.",
+    positive: "Estabilidad emocional y alegría interior independiente de las circunstancias.",
+    considerations: "Aporta claridad y ligereza en estados de pesadez anímica cíclica."
   },
   {
     id: "oak",
@@ -216,9 +215,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Quercus robur",
     spanish: "Roble",
     group: "Abatimiento",
-    negative: "Luchador agotado que no se rinde. Ignora la necesidad de descanso. Sentido del deber rígido.",
-    positive: "Fuerza con flexibilidad. Saber cuándo descansar y respetar los límites físicos.",
-    therapeutic: "Contracturas, hernias, agotamiento extremo tras años de esfuerzo."
+    negative: "Luchador que ignora su propio agotamiento. Sentido del deber rígido y excesivo.",
+    positive: "Fuerza flexible. Capacidad de reconocer los límites y permitirse el descanso.",
+    considerations: "Relaja contracturas crónicas en hombros y espalda por exceso de carga."
   },
   {
     id: "olive",
@@ -226,9 +225,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Olea europaea",
     spanish: "Olivo",
     group: "Falta de interés",
-    negative: "Agotamiento total (físico y mental) tras un periodo de gran esfuerzo o sufrimiento.",
-    positive: "Regeneración energética. Paz y vitalidad restauradas desde el interior.",
-    therapeutic: "Anemia, fatiga crónica, post-operatorios."
+    negative: "Agotamiento total tras un periodo de gran esfuerzo, físico o mental.",
+    positive: "Regeneración energética profunda. Recuperación de la paz y la vitalidad.",
+    considerations: "Fundamental en periodos de fatiga extrema y recuperación energética."
   },
   {
     id: "pine",
@@ -236,9 +235,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Pinus sylvestris",
     spanish: "Pino",
     group: "Abatimiento",
-    negative: "Culpa, autorreproche. Se responsabiliza de errores ajenos. Nunca está satisfecho con sus logros.",
-    positive: "Perdón a uno mismo. Aceptación de la responsabilidad sin juicio destructivo.",
-    therapeutic: "Problemas urinarios, autocastigo físico, culpa inconsciente."
+    negative: "Culpa y autorreproche constante. Se responsabiliza de errores ajenos.",
+    positive: "Perdón y aceptación propia. Responsabilidad sana sin juicio destructivo.",
+    considerations: "Libera tensiones asociadas al autocastigo y la insatisfacción personal."
   },
   {
     id: "red-chestnut",
@@ -246,9 +245,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Aesculus carnea",
     spanish: "Castaño rojo",
     group: "Miedo",
-    negative: "Preocupación excesiva y miedo por la seguridad de los seres queridos. Anticipa lo peor para otros.",
-    positive: "Cuidar a los demás con calma y confianza. Proyectar pensamientos positivos.",
-    therapeutic: "Ansiedad por otros, codependencia emocional."
+    negative: "Preocupación excesiva y miedo por la seguridad de los seres queridos.",
+    positive: "Cuidar a los demás con calma y confianza. Proyectar seguridad.",
+    considerations: "Promueve la tranquilidad en vínculos de codependencia emocional."
   },
   {
     id: "rock-rose",
@@ -256,9 +255,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Helianthemum nummularium",
     spanish: "Heliantemo",
     group: "Miedo",
-    negative: "Pánico, terror paralizante. Emergencias extremas donde el miedo es incapacitante.",
-    positive: "Valor heroico. Calma y presencia de ánimo en situaciones de gran peligro.",
-    therapeutic: "Ataques de pánico, pesadillas, taquicardia por susto."
+    negative: "Pánico y terror paralizante. Reacción desproporcionada ante emergencias.",
+    positive: "Valor heroico y presencia de ánimo en situaciones límite de peligro.",
+    considerations: "Útil en estados de agitación nerviosa súbita y sobresaltos nocturnos."
   },
   {
     id: "rock-water",
@@ -266,9 +265,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Agua de roca",
     spanish: "Agua de roca",
     group: "Preocupación por otros",
-    negative: "Autodisciplina rígida, martirio personal por un ideal. Perfeccionismo extremo consigo mismo.",
-    positive: "Flexibilidad y fluidez. Disfrutar de la vida manteniendo los ideales sin rigidez.",
-    therapeutic: "Rigidez articular, estreñimiento, endurecimiento físico."
+    negative: "Autodisciplina rígida y perfeccionismo extremo. Martirio por ideales.",
+    positive: "Flexibilidad y fluidez. Disfrutar del proceso con amabilidad hacia uno mismo.",
+    considerations: "Fomenta la elasticidad física y relaja la rigidez en las articulaciones."
   },
   {
     id: "scleranthus",
@@ -276,9 +275,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Scleranthus annuus",
     spanish: "Escleranto",
     group: "Incertidumbre",
-    negative: "Indecisión entre dos opciones. Oscilación de humor. Inestabilidad.",
-    positive: "Equilibrio y resolución. Decisión rápida y centrada.",
-    therapeutic: "Vértigo, mareo, desequilibrios hormonales."
+    negative: "Indecisión entre dos opciones. Oscilaciones de humor e inestabilidad.",
+    positive: "Equilibrio, resolución y centro. Decisión rápida basada en la claridad.",
+    considerations: "Acompaña en sensaciones de inestabilidad física y mareos por descompensación."
   },
   {
     id: "star-of-bethlehem",
@@ -286,9 +285,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Ornithogalum umbellatum",
     spanish: "Leche de gallina",
     group: "Abatimiento",
-    negative: "Secuelas de shock traumático (reciente o antiguo). Bloqueo tras una mala noticia.",
-    positive: "Consuelo y alivio. Integración del trauma y restauración del sistema energético.",
-    therapeutic: "Traumas físicos o emocionales, cicatrización, bloqueos."
+    negative: "Bloqueo emocional o físico tras un impacto traumático reciente o antiguo.",
+    positive: "Consuelo, alivio e integración del impacto traumático. Paz energética.",
+    considerations: "Favorece la liberación de bloqueos y apoya la cicatrización emocional."
   },
   {
     id: "sweet-chestnut",
@@ -296,9 +295,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Castanea sativa",
     spanish: "Castaño dulce",
     group: "Abatimiento",
-    negative: "Angustia extrema, desesperación límite. Sentir que se ha llegado al final de la resistencia.",
-    positive: "Transformación profunda. Luz después de la oscuridad absoluta.",
-    therapeutic: "Crisis existenciales profundas."
+    negative: "Angustia extrema al límite de la resistencia. Desesperación profunda.",
+    positive: "Transformación y luz tras la crisis. Renacimiento emocional.",
+    considerations: "Apoya en momentos de transición existencial profunda y quiebre emocional."
   },
   {
     id: "vervain",
@@ -306,9 +305,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Verbena officinalis",
     spanish: "Verbena",
     group: "Preocupación por otros",
-    negative: "Fanatismo, entusiasmo excesivo. Intenta convencer a otros por la fuerza. Hiperactividad.",
-    positive: "Moderación y tolerancia. Capacidad de inspirar a otros con calma.",
-    therapeutic: "Inflamaciones, insomnio por tensión ideativa, tics."
+    negative: "Entusiasmo excesivo que agota. Fanatismo e incapacidad para relajarse.",
+    positive: "Moderación y capacidad de inspirar a otros con calma y tolerancia.",
+    considerations: "Fomenta la relajación muscular y ayuda en el descanso ante el exceso de ideas."
   },
   {
     id: "vine",
@@ -316,9 +315,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Vitis vinifera",
     spanish: "Vid",
     group: "Preocupación por otros",
-    negative: "Dominación, tiranía, inflexibilidad. Exige obediencia. Ambición de poder.",
-    positive: "Liderazgo sabio y motivador. Respeto por la individualidad ajena.",
-    therapeutic: "Hipertensión, dolores de espalda por tensión de mando."
+    negative: "Dominación, tiranía e inflexibilidad. Exigencia de obediencia absoluta.",
+    positive: "Liderazgo sabio, comprensivo y motivador. Respeto por los demás.",
+    considerations: "Relaja tensiones asociadas a la necesidad de control y el autoritarismo."
   },
   {
     id: "walnut",
@@ -326,9 +325,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Juglans regia",
     spanish: "Nogal",
     group: "Hipersensibilidad",
-    negative: "Dificultad ante los cambios. Influenciable por opiniones ajenas en momentos de transición.",
-    positive: "Protección y adaptabilidad. Mantener el propio camino a pesar de las circunstancias externas.",
-    therapeutic: "Pubertad, menopausia, dentición, cambios de vida."
+    negative: "Dificultad ante los cambios o transiciones. Influenciable por el entorno.",
+    positive: "Protección y adaptabilidad. Mantener el camino propio en momentos de cambio.",
+    considerations: "Ideal para etapas de transición biológica: pubertad, cambios de vida o menopausia."
   },
   {
     id: "water-violet",
@@ -336,9 +335,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Hottonia palustris",
     spanish: "Violeta de agua",
     group: "Soledad",
-    negative: "Orgullo, distanciamiento, reserva excesiva. Se siente superior y se aísla.",
-    positive: "Cercanía y humildad. Compartir la propia sabiduría con los demás.",
-    therapeutic: "Rigidez en la parte alta de la columna."
+    negative: "Orgullo y distanciamiento. Se siente superior y se aísla de los demás.",
+    positive: "Humildad y cercanía compartiendo la sabiduría personal con el grupo.",
+    considerations: "Acompaña la rigidez en la parte alta de la columna y el aislamiento social."
   },
   {
     id: "white-chestnut",
@@ -346,9 +345,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Castaño de Indias",
     spanish: "Castaño blanco",
     group: "Falta de interés",
-    negative: "Pensamientos circulares, diálogo interno constante. Rumiación mental que impide la paz.",
-    positive: "Paz mental y control del pensamiento. Claridad y calma.",
-    therapeutic: "Insomnio por rumiación, dolores de cabeza frontales."
+    negative: "Rumiación mental. Pensamientos circulares que impiden la paz y el descanso.",
+    positive: "Claridad, paz mental y control sobre los procesos de pensamiento.",
+    considerations: "Ideal para conciliar el descanso nocturno ante el ruido mental constante."
   },
   {
     id: "wild-oat",
@@ -356,9 +355,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Bromus ramosus",
     spanish: "Avena silvestre",
     group: "Incertidumbre",
-    negative: "Insatisfacción vocacional. No encuentra su propósito en la vida. Desorientación.",
-    positive: "Claridad de metas. Definición de la vocación y el sentido vital.",
-    therapeutic: "Crisis de los 40, desorientación profesional."
+    negative: "Desorientación vocacional o falta de propósito claro en la vida.",
+    positive: "Claridad de metas y definición del sentido vital y profesional.",
+    considerations: "Acompaña crisis de identidad y momentos de redefinición de objetivos personales."
   },
   {
     id: "wild-rose",
@@ -366,9 +365,9 @@ export const BACH_FLOWERS_DATA = [
     latin: "Rosa canina",
     spanish: "Rosa silvestre",
     group: "Falta de interés",
-    negative: "Apatía, resignación, falta de motivación. No se queja pero no se esfuerza.",
-    positive: "Entusiasmo y vitalidad. Interés activo por la vida y el gozo.",
-    therapeutic: "Líbido baja, anemia, convalecencia prolongada."
+    negative: "Apatía, resignación y falta de motivación ante la vida.",
+    positive: "Entusiasmo vital y participación gozosa en la experiencia diaria.",
+    considerations: "Aporta energía en estados de desinterés profundo y falta de vitalidad sexual."
   },
   {
     id: "willow",
@@ -376,8 +375,8 @@ export const BACH_FLOWERS_DATA = [
     latin: "Salix vitellina",
     spanish: "Sauce",
     group: "Abatimiento",
-    negative: "Resentimiento, amargura, victimismo. 'Pobre de mí'. Rencor hacia la vida.",
-    positive: "Responsabilidad y perdón. Capacidad de disfrutar y atraer cosas positivas.",
-    therapeutic: "Reumatismo, problemas digestivos por amargura."
+    negative: "Resentimiento, amargura y victimismo. Sensación de injusticia constante.",
+    positive: "Responsabilidad propia, perdón y optimismo constructivo.",
+    considerations: "Fomenta la fluidez articular y mejora el confort digestivo ante el rencor."
   }
 ];

@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Mantenemos tu estructura de variables HSL para flexibilidad total
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,8 +49,23 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Manrope", "sans-serif"],
-        serif: ["Playfair Display", "serif"],
+        // Ajustado para coincidir con tu index.html y dar soporte a Manrope
+        sans: ["Inter", "Manrope", "sans-serif"],
+        heading: ["Playfair Display", "serif"],
+      },
+      keyframes: {
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
+      animation: {
+        "fade-in-up": "fade-in-up 0.5s ease-out forwards",
+        float: "float 3s ease-in-out infinite",
       },
     },
   },

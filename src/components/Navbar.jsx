@@ -73,10 +73,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Toggle Button */}
-        <button 
-          className="lg:hidden p-2 text-slate-600 z-[110]"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
+        <button aria-label="Abrir menú de navegación" className="lg:hidden p-2 text-slate-600 z-[100]" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>

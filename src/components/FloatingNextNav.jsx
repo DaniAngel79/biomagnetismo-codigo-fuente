@@ -1,84 +1,73 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
-// CAMBIO AQUÍ: Importamos el nombre correcto que aparece en tu error
-import { BACH_FLOWERS_DATA } from '../data/bachFlowers'; 
-
-const baseRoutes = [
-  { path: "/", label: "Inicio" },
-  { path: "/biomagnetismo", label: "Biomagnetismo" },
-  { path: "/el-par-biomagnetico-que-es", label: "El Par Biomagnético" },
-  { path: "/origen-del-biomagnetismo", label: "Origen" },
-  { path: "/biomagnetismo-infantil", label: "Biomagnetismo Infantil" },
-  { path: "/los-campos-magneticos-en-nuestro-cuerpo", label: "Campos Magnéticos" },
-  { path: "/pares-temporales", label: "Pares Temporales" },
-  { path: "/alergias-y-biomagnetismo", label: "Alergias" },
-  { path: "/flores-de-bach", label: "Flores de Bach" },
-  { path: "/flores-de-bach/lista", label: "Lista de Flores" }
-];
-
-// CAMBIO AQUÍ: Usamos BACH_FLOWERS_DATA
-const flowerRoutes = BACH_FLOWERS_DATA.map(flor => ({
-  path: `/flores-de-bach/${flor.id}`,
-  label: flor.name
-}));
-
-const endRoutes = [
-  { path: "/consultas-online-flores-bach", label: "Consultas Online" },
-  { path: "/contacto", label: "Contacto" }
-];
-
-const routes = [...baseRoutes, ...flowerRoutes, ...endRoutes];
+import { BACH_FLOWERS_DATA } from '../data/bachFlowers';
 
 const FloatingNextNav = () => {
-  const { pathname } = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const currentIndex = routes.findIndex(route => route.path === pathname);
-  
-  if (currentIndex === -1) return null;
+  // 1. Lista de rutas principales
+  const mainRoutes = [
+    '/', '/biomagnetismo', '/par-biomagnetico', '/pares-temporales',
+    '/alergias', '/origen-biomagnetismo', '/biomagnetismo-infantil',
+    '/campos-magneticos', '/flores-bach', '/catalogo-flores',
+    '/consultas-online', '/contacto'
+  ];
 
-  const prevRoute = routes[currentIndex - 1];
-  const nextRoute = routes[currentIndex + 1];
+  // 2. Extraer ID de la URL manualmente (más fiable que useParams en componentes globales)
+  const pathParts = location.pathname.split('/');
+  const isFlowerDetail = location.pathname.includes('/flores-de-bach/');
+  const currentFlowerId = isFlowerDetail ? pathParts[pathParts.length - 1] : null;
 
-  const handleNavigation = (path) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    navigate(path);
+  const handleNavigation = (direction) => {
+    if (isFlowerDetail && currentFlowerId) {
+      // Buscamos la flor actual en la data
+      const currentIndex = BACH_FLOWERS_DATA.findIndex(f => String(f.id) === String(currentFlowerId));
+      
+      if (currentIndex !== -1) {
+        let nextIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+
+        if (nextIndex >= 0 && nextIndex < BACH_FLOWERS_DATA.length) {
+          const nextFlower = BACH_FLOWERS_DATA[nextIndex];
+          navigate(`/flores-de-bach/${nextFlower.id}`);
+        } else {
+          navigate('/catalogo-flores');
+        }
+      }
+    } else {
+      // Navegación de temas generales
+      const currentIndex = mainRoutes.indexOf(location.pathname);
+      if (currentIndex === -1) return;
+      const nextIndex = direction === 'next' 
+        ? (currentIndex + 1) % mainRoutes.length 
+        : (currentIndex - 1 + mainRoutes.length) % mainRoutes.length;
+      navigate(mainRoutes[nextIndex]);
+    }
+    
+    // Forzar scroll arriba para evitar el efecto "footer"
+    setTimeout(() => window.scrollTo(0, 0), 10);
   };
 
   return (
-    <>
-      {prevRoute && (
-        <div className="fixed left-4 top-1/2 -translate-y-1/2 z-[9999] group flex items-center">
-          <Button
-            onClick={() => handleNavigation(prevRoute.path)}
-            size="icon"
-            className="h-12 w-12 rounded-full shadow-xl bg-white/90 hover:bg-primary text-primary hover:text-white border border-border transition-all duration-300"
-          >
-            <ChevronLeft size={28} />
-          </Button>
-          <div className="ml-2 px-3 py-1 bg-primary text-white text-xs font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg">
-             {prevRoute.label}
-          </div>
-        </div>
-      )}
+    <div className="fixed inset-y-0 left-0 right-0 pointer-events-none z-50 flex items-center justify-between px-2 sm:px-6">
+      <Button
+        variant="ghost"
+        onClick={() => handleNavigation('prev')}
+        className="pointer-events-auto w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/90 shadow-2xl border border-emerald-100 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all"
+      >
+        <ChevronLeft size={40} />
+      </Button>
 
-      {nextRoute && (
-        <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[9999] group flex flex-row-reverse items-center">
-          <Button
-            onClick={() => handleNavigation(nextRoute.path)}
-            size="icon"
-            className="h-12 w-12 rounded-full shadow-xl bg-white/90 hover:bg-primary text-primary hover:text-white border border-border transition-all duration-300"
-          >
-            <ChevronRight size={28} />
-          </Button>
-          <div className="mr-2 px-3 py-1 bg-primary text-white text-xs font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg">
-             {nextRoute.label}
-          </div>
-        </div>
-      )}
-    </>
+      <Button
+        variant="ghost"
+        onClick={() => handleNavigation('next')}
+        className="pointer-events-auto w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/90 shadow-2xl border border-emerald-100 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all"
+      >
+        <ChevronRight size={40} />
+      </Button>
+    </div>
   );
 };
 

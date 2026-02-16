@@ -1,62 +1,74 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// Componentes de Infraestructura (Carga estática)
+import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
-import RelatedNavigation from './components/RelatedNavigation';
+import { Toaster } from './components/ui/toaster';
 
-import HomePage from './pages/HomePage';
-import AlergiasPage from './pages/AlergiasPage';
-import BiomagnetismoInfantilPage from './pages/BiomagnetismoInfantilPage';
-import BiomagnetismoPage from './pages/BiomagnetismoPage';
-import CamposMagneticosPage from './pages/CamposMagneticosPage';
-import ConsultasOnlinePage from './pages/ConsultasOnlinePage';
-import ContactoPage from './pages/ContactoPage';
-import FlorDetailPage from './pages/FlorDetailPage';
-import FloresBachListPage from './pages/FloresBachListPage';
-import FloresBachPage from './pages/FloresBachPage';
-import NotFoundPage from './pages/NotFoundPage';
-import OrigenBiomagnetismoPage from './pages/OrigenBiomagnetismoPage';
-import ParBiomagneticoPage from './pages/ParBiomagneticoPage';
-import ParesTemporalesPage from './pages/ParesTemporalesPage';
+// Carga diferida (Lazy Loading) para optimizar el rendimiento (LCP)
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AlergiasPage = lazy(() => import('./pages/AlergiasPage'));
+const BiomagnetismoInfantilPage = lazy(() => import('./pages/BiomagnetismoInfantilPage'));
+const BiomagnetismoPage = lazy(() => import('./pages/BiomagnetismoPage'));
+const CamposMagneticosPage = lazy(() => import('./pages/CamposMagneticosPage'));
+const ConsultasOnlinePage = lazy(() => import('./pages/ConsultasOnlinePage'));
+const ContactoPage = lazy(() => import('./pages/ContactoPage'));
+const FlorDetailPage = lazy(() => import('./pages/FlorDetailPage'));
+const FloresBachListPage = lazy(() => import('./pages/FloresBachListPage'));
+const FloresBachPage = lazy(() => import('./pages/FloresBachPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const OrigenBiomagnetismoPage = lazy(() => import('./pages/OrigenBiomagnetismoPage'));
+const ParBiomagneticoPage = lazy(() => import('./pages/ParBiomagneticoPage'));
+const ParesTemporalesPage = lazy(() => import('./pages/ParesTemporalesPage'));
+const PrivacidadPage = lazy(() => import('./pages/PrivacidadPage'));
+
+// Pantalla de carga ultraligera
+const PageLoader = () => (
+  <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="w-8 h-8 border-4 border-emerald-100 border-t-emerald-600 rounded-full animate-spin"></div>
+  </div>
+);
 
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen relative">
-        <ScrollToTop />
-        <Navbar />
-        <RelatedNavigation />
-        
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            
-            {/* Seccion Biomagnetismo - Rutas exactas */}
-            <Route path="/biomagnetismo" element={<BiomagnetismoPage />} />
-            <Route path="/par-biomagnetico" element={<ParBiomagneticoPage />} />
-            <Route path="/pares-temporales" element={<ParesTemporalesPage />} />
-            <Route path="/alergias" element={<AlergiasPage />} />
-            <Route path="/origen-biomagnetismo" element={<OrigenBiomagnetismoPage />} />
-            <Route path="/biomagnetismo-infantil" element={<BiomagnetismoInfantilPage />} />
-            <Route path="/campos-magneticos" element={<CamposMagneticosPage />} />
+      <ScrollToTop />
+      {/* El componente Layout ya envuelve Navbar, Footer y las flechas de navegación */}
+      <Layout> 
+        <main className="outline-none">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              
+              {/* Sección Biomagnetismo */}
+              <Route path="/biomagnetismo" element={<BiomagnetismoPage />} />
+              <Route path="/par-biomagnetico" element={<ParBiomagneticoPage />} />
+              <Route path="/pares-temporales" element={<ParesTemporalesPage />} />
+              <Route path="/alergias" element={<AlergiasPage />} />
+              <Route path="/origen-biomagnetismo" element={<OrigenBiomagnetismoPage />} />
+              <Route path="/biomagnetismo-infantil" element={<BiomagnetismoInfantilPage />} />
+              <Route path="/campos-magneticos" element={<CamposMagneticosPage />} />
 
-            {/* Seccion Flores de Bach */}
-            <Route path="/flores-bach" element={<FloresBachPage />} />
-            <Route path="/catalogo-flores" element={<FloresBachListPage />} />
-            <Route path="/flores-de-bach/:id" element={<FlorDetailPage />} />
-            <Route path="/consultas-online" element={<ConsultasOnlinePage />} />
+              {/* Sección Flores de Bach */}
+              <Route path="/flores-bach" element={<FloresBachPage />} />
+              <Route path="/catalogo-flores" element={<FloresBachListPage />} />
+              <Route path="/flores-de-bach/:id" element={<FlorDetailPage />} />
+              <Route path="/consultas-online" element={<ConsultasOnlinePage />} />
 
-            <Route path="/contacto" element={<ContactoPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
+              {/* Páginas adicionales */}
+              <Route path="/contacto" element={<ContactoPage />} />
+              <Route path="/privacidad" element={<PrivacidadPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Suspense>
         </main>
-
-        <Footer />
-        <WhatsAppButton />
-      </div>
+      </Layout>
+      
+      {/* Elementos flotantes globales */}
+      <WhatsAppButton />
+      <Toaster />
     </Router>
   );
 }

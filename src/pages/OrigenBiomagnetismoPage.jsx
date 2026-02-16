@@ -1,120 +1,126 @@
-
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Button } from "../components/ui/button";
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight, History, ShieldCheck, Activity, Brain } from "lucide-react";
 
 const OrigenBiomagnetismoPage = () => {
   return (
     <>
       <Helmet>
-        <title>Origen del Biomagnetismo | Dr. Isaac Goiz | Daniel Angel</title>
-        <meta name="description" content="El Dr. Isaac Goiz Durán es un médico pionero que desarrolló la técnica del Par Biomagnético para restaurar el equilibrio del pH." />
+        <title>Historia y Origen del Biomagnetismo | Daniel Angel</title>
+        <meta name="description" content="Conoce la evolución del Biomagnetismo, desde las culturas antiguas hasta el desarrollo del Par Biomagnético por el Dr. Isaac Goiz." />
+        <link rel="canonical" href="https://biomagnetismo.store/origen-biomagnetismo" />
       </Helmet>
 
-      <article className="pt-32 pb-16">
+      <article className="pt-32 pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
           <header className="mb-12">
             <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <img 
                 src="img/sesion-dr-goitz.webp" 
-                alt="Dr. Isaac Goiz" 
-                className="w-full rounded-2xl"
+                alt="Historia del Biomagnetismo" 
+                className="w-full rounded-[2rem] shadow-lg"
+                loading="eager"
+                width="500"
+                height="350"
               />
               <img 
                 src="img/adn-biomagnetismo-energia-celular.webp" 
-                alt="ADN y Biomagnetismo" 
-                className="w-full rounded-2xl"
+                alt="Bioenergía y magnetismo" 
+                className="w-full rounded-[2rem] shadow-lg"
+                loading="lazy"
+                width="500"
+                height="350"
               />
             </div>
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
               Origen del Biomagnetismo
             </h1>
           </header>
 
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              El Biomagnetismo ha estado presente a lo largo de la historia y en diversas civilizaciones. Existen vestigios documentados en culturas tan antiguas como la china, hindú, egipcia y árabe. Un ejemplo notable es el de Cleopatra, quien utilizaba imanes para realzar y mantener su belleza.
+          <div className="prose prose-slate max-w-none">
+            <p className="text-lg text-slate-600 leading-relaxed">
+              El uso de imanes con fines de bienestar ha estado presente a lo largo de la historia. Civilizaciones como la china, egipcia y árabe ya documentaban el uso de campos magnéticos para promover la vitalidad.
             </p>
 
-            <p className="text-muted-foreground leading-relaxed">
-              Sin embargo, fue el destacado médico cirujano mexicano <strong>Isaac Goiz</strong> quien investigó y descubrió lo que hoy conocemos como el Par Biomagnético en su totalidad. A través de diversas investigaciones, logró establecer la conexión entre los campos magnéticos que existen en nuestro interior y el desarrollo de enfermedades humanas.
+            <p className="text-slate-600 leading-relaxed">
+              En la era moderna, el **Dr. Isaac Goiz Durán** fue el pionero que estructuró estas observaciones en lo que hoy conocemos como el **Par Biomagnético**. Su investigación permitió entender cómo los campos magnéticos externos interactúan con la bioelectricidad de nuestro cuerpo para restaurar el equilibrio.
             </p>
 
-            <h2 className="font-heading text-2xl font-bold text-foreground mt-12 mb-4">
-              Fundamentos del Biomagnetismo
+            <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4 flex items-center gap-2">
+              <ShieldCheck className="text-emerald-500" /> El Concepto del pH
             </h2>
 
-            <p className="text-muted-foreground leading-relaxed">
-              El biomagnetismo fue descubierto por el Dr. Isaac Goiz y se utiliza para tratar una amplia gama de patologías, desde resfriados hasta tumores. A través de los imanes, se busca aliviar síntomas como la depresión y las jaquecas, que pueden afectar la calidad de vida.
-            </p>
+            
 
-            <div className="bg-accent/10 border border-accent/20 rounded-2xl p-6 my-8">
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">
-                El cuerpo y el pH
-              </h3>
-              <p className="text-muted-foreground">
-                El cuerpo presenta distorsiones en el pH de los órganos cuando hay enfermedad. En un estado de alcalinidad, pueden existir disfunciones, bacterias patógenas o no patógenas, y parásitos. En un estado de acidez, pueden presentarse disfunciones orgánicas, virus patógenos y hongos.
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 my-8">
+              <p className="text-slate-600 text-sm italic">
+                El enfoque del Dr. Goiz se basa en la neutralización del pH bionergético. Cuando un tejido pierde su equilibrio (tornándose demasiado ácido o alcalino), se crean condiciones favorables para la inestabilidad. Los imanes buscan devolver al organismo a su **Nivel Energético Neutral (NEN)**.
               </p>
             </div>
 
-            <h2 className="font-heading text-2xl font-bold text-foreground mt-12 mb-4">
-              Proceso de Tratamiento
+            <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">
+              Enfoque Psicosomático
             </h2>
 
-            <p className="text-muted-foreground leading-relaxed">
-              El objetivo del biomagnetismo es restaurar el pH, creando un ambiente desfavorable para los microorganismos patógenos, lo que facilita su eliminación. Durante las sesiones, que tienen una duración aproximada de una hora, se evalúa la necesidad de múltiples sesiones según el caso; algunos pacientes pueden responder favorablemente tras una sola sesión.
+            <p className="text-slate-600 leading-relaxed">
+              La relación entre las emociones y la respuesta física es una pieza clave. Se ha observado que estados de estrés agudo o emociones no procesadas pueden distorsionar el equilibrio del cuerpo.
             </p>
 
-            <p className="text-muted-foreground leading-relaxed">
-              Es fundamental señalar que el biomagnetismo es una <strong>terapia complementaria</strong> que busca acompañar los tratamientos de la medicina tradicional, mejorando así la evolución de los pacientes.
-            </p>
+            <div className="grid md:grid-cols-2 gap-6 my-8">
+              <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
+                <Brain className="text-emerald-600 mb-3" />
+                <h4 className="font-bold text-slate-900 mb-2">Impacto Emocional</h4>
+                <ul className="text-xs text-slate-600 space-y-2">
+                  <li>• Tensiones por estrés acumulado</li>
+                  <li>• Factores desestabilizadores</li>
+                  <li>• Estados de alerta constante</li>
+                </ul>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                <Activity className="text-blue-600 mb-3" />
+                <h4 className="font-bold text-slate-900 mb-2">Respuesta Física</h4>
+                <p className="text-xs text-slate-600">
+                  El cuerpo busca compensar estos estados emocionales alterando su equilibrio interno, lo que puede derivar en fatiga y malestar.
+                </p>
+              </div>
+            </div>
 
-            <h2 className="font-heading text-2xl font-bold text-foreground mt-12 mb-4">
-              ¿Cómo se desequilibra el pH?
+            <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">
+              Bienestar Integral
             </h2>
 
-            <p className="text-muted-foreground leading-relaxed">
-              El pH puede alterarse por diversas emociones. El Dr. Ryke Geerd Hamer, oncólogo, investigó esta relación y descubrió que el pH se distorsiona debido a emociones que cumplen con cuatro criterios:
+            <p className="text-slate-600 leading-relaxed">
+              El Biomagnetismo es una **disciplina energética y complementaria**. No requiere medicación y su objetivo final es la **homeostasis** (la capacidad del cuerpo para mantener una condición interna estable).
             </p>
 
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• Emoción estresante</li>
-              <li>• Vivida en soledad</li>
-              <li>• Sin solución aparente</li>
-              <li>• Desestabilizadora</li>
-            </ul>
-
-            <h2 className="font-heading text-2xl font-bold text-foreground mt-12 mb-4">
-              ¿Quiénes pueden beneficiarse de la terapia?
-            </h2>
-
-            <p className="text-muted-foreground leading-relaxed">
-              El biomagnetismo está indicado para todas las personas, así como para animales y plantas, ya que todos poseemos energía eléctrica. Esta terapia es energética, similar a la homeopatía y la acupuntura, y no requiere medicación para que el paciente alcance la homeostasis.
-            </p>
-
-            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">
-                Aplicaciones en la vida cotidiana
-              </h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><strong>Niños:</strong> Ayuda a tratar patologías que no pueden expresar verbalmente.</li>
-                <li><strong>Adultos:</strong> Alivia dolencias relacionadas con el trabajo, problemas de sueño, estrés, mala digestión, fatiga extrema, obesidad, infecciones, jaquecas, vértigos y mareos.</li>
-                <li><strong>Enfermedades autoinmunes:</strong> VIH, artritis, lupus, hipertiroidismo.</li>
-                <li><strong>Sistema digestivo:</strong> Colon irritable y enfermedades hepáticas.</li>
+            {/* UX DEFENSIVA: SECCIÓN DE APLICACIÓN SEGURA */}
+            <div className="bg-slate-900 text-slate-400 p-8 rounded-[2rem] my-12">
+              <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-widest">Aviso de Aplicación</h3>
+              <p className="text-xs leading-relaxed mb-4">
+                Esta técnica se aplica hoy en día para acompañar el bienestar en diversas etapas de la vida:
+              </p>
+              <ul className="grid grid-cols-2 gap-4 text-[10px] uppercase font-bold">
+                <li className="border-l border-emerald-500 pl-3">Confort en la Infancia</li>
+                <li className="border-l border-emerald-500 pl-3">Gestión de Estrés Laboral</li>
+                <li className="border-l border-emerald-500 pl-3">Apoyo en Procesos Digestivos</li>
+                <li className="border-l border-emerald-500 pl-3">Recuperación de Vitalidad</li>
               </ul>
+              <p className="mt-8 pt-6 border-t border-white/10 text-[9px] italic">
+                IMPORTANTE: El biomagnetismo no sustituye diagnósticos ni tratamientos médicos para patologías crónicas o agudas. Siempre consulte a su médico sobre condiciones como Artritis, VIH o cualquier otra afección clínica.
+              </p>
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-primary rounded-2xl text-primary-foreground text-center">
-            <h3 className="font-heading text-2xl font-bold mb-4">¿Querés experimentar los beneficios del Biomagnetismo?</h3>
-            <p className="mb-6 opacity-90">Agenda tu consulta y comienza tu camino hacia el bienestar.</p>
-            <Button asChild className="bg-white text-primary hover:bg-white/90 rounded-full px-8">
-              <a href="https://wa.me/5493547446076?text=Hola,%20quisiera%20un%20turno%20para%20la%20terapia%20de%20biomagnetismo.%20Mi%20nombre%20es%20" target="_blank" rel="noopener noreferrer">
-                Agendar por WhatsApp <ArrowRight className="ml-2" size={18} />
-              </a>
+          {/* CTA TRACKEADO */}
+          <div className="mt-16 p-10 bg-emerald-600 rounded-[3rem] text-white text-center shadow-xl">
+            <h3 className="text-2xl font-bold mb-4">¿Querés conocer tu Nivel Energético Neutral?</h3>
+            <p className="mb-8 opacity-90">Agenda una sesión de equilibrio biomagnético y experimenta el bienestar natural.</p>
+            <Button 
+              onClick={() => window.open("https://wa.me/5493547446076", "_blank")}
+              className="bg-white text-emerald-600 hover:bg-slate-100 rounded-full px-10 py-6 font-bold"
+            >
+              Agendar Turno por WhatsApp <ArrowRight className="ml-2" />
             </Button>
           </div>
 

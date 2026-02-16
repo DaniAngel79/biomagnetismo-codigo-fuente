@@ -3,19 +3,20 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
+import ErrorBoundary from './ErrorBoundary'; // 1. Agrega esta importación
 
-// 1. Eliminamos el scroll manual de history que causaba lentitud
 if ('scrollRestoration' in window.history) {
   window.history.scrollRestoration = 'manual';
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// 2. Envolvemos App con HelmetProvider
 root.render(
   <React.StrictMode>
     <HelmetProvider>
-      <App />
+      <ErrorBoundary> {/* 2. Envuelve tu App */}
+        <App />
+      </ErrorBoundary>
     </HelmetProvider>
   </React.StrictMode>
 );

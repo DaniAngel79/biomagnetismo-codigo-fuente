@@ -5,13 +5,13 @@ import FloatingNextNav from './FloatingNextNav';
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white">
       <Navbar />
       <main className="flex-grow">
-        {children}
+        {/* Sin esta prop de children, las páginas no se renderizan */}
+        {children} 
       </main>
       <Footer />
-      {/* El componente debe ir aquí, al final, para que flote sobre todo */}
       <FloatingNextNav />
     </div>
   );

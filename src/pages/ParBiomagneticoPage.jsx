@@ -1,101 +1,116 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Button } from "../components/ui/button";
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight, Info, Magnet, Zap } from "lucide-react";
 
 const ParBiomagneticoPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleWhatsAppTracking = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Contact', { content_name: 'Teoria_Par_Biomagnetico' });
+    }
+    window.open("https://wa.me/5493547446076?text=Hola%20Daniel,%20le%C3%AD%20sobre%20el%20Par%20Biomagn%C3%A9tico%20y%20quiero%20consultar.", "_blank");
+  };
+
   return (
     <>
       <Helmet>
-        <title>El Par Biomagnético, ¿Qué es? | Biomagnetismo Daniel Angel</title>
-        <meta name="description" content="Explora el biomagnetismo, la medicina del futuro. Descubre cómo los campos magnéticos positivo y negativo interactúan con el cuerpo humano." />
+        <title>¿Qué es el Par Biomagnético? | Biofísica y Equilibrio</title>
+        <meta name="description" content="Descubre la base científica del Par Biomagnético: cómo la interacción de imanes de intensidad moderada promueve la homeostasis." />
+        <link rel="canonical" href="https://biomagnetismo.store/par-biomagnetico" />
       </Helmet>
 
-      <article className="pt-32 pb-16">
+      <article className="pt-32 pb-16 bg-white min-h-screen">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
-          {/* Header */}
+          
           <header className="mb-12">
-            <img 
-              src="img/par-palma-palma.webp" 
-              alt="El Par Biomagnético" 
-              className="w-full h-64 object-contain bg-muted/30 rounded-2xl mb-8"
-            />
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
+            <div className="bg-slate-50 rounded-[2rem] p-8 mb-8 border border-slate-100 flex justify-center">
+              <img 
+                src="img/par-palma-palma.webp" 
+                alt="Aplicación de imanes en polaridad dual" 
+                className="max-h-64 object-contain drop-shadow-md"
+                width="600"
+                height="300"
+              />
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
               Teoría del Par Biomagnético
             </h1>
           </header>
 
-          {/* Content */}
-          <div className="prose prose-lg max-w-none">
-            <img 
-              src="img/biomagnetismo-medicina-del-futuro-ph.webp" 
-              alt="Campos magnéticos en el cuerpo" 
-              className="float-right w-64 ml-8 mb-4 rounded-xl"
-            />
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              El Biomagnetismo se puede definir como la rama de la biofísica que investiga el efecto de los campos magnéticos en los organismos vivos. Es fundamental comprender que cuando un campo magnético interactúa con nuestro organismo, lo hace sobre un conjunto de sustancias, siendo el agua la más abundante.
-            </p>
-
-            <p className="text-muted-foreground leading-relaxed">
-              A nivel macroscópico, el agua es diamagnética y parece no ser afectada por un imán. Sin embargo, esta percepción cambia debido a las moléculas disueltas en ella, que son sustancias paramagnéticas y altamente sensibles a la influencia de los campos magnéticos. Entre estas se encuentran el oxígeno, las proteínas, las enzimas, los catalizadores, los radicales libres, los clatratos y, especialmente, lo que hoy se conoce como imanes monomoleculares, como las metaloproteínas.
-            </p>
-
-            <h2 className="font-heading text-2xl font-bold text-foreground mt-12 mb-4">
-              ¿Qué es la medicina del Par Biomagnético?
-            </h2>
-
-            <p className="text-muted-foreground leading-relaxed">
-              Las fuerzas magnéticas son las que más impactan a todos los seres vivos. Como mencionó el premio Nobel de física Richard Feynman, "ahora comprendemos que la vida misma debe ser entendida en términos de biomagnetismo".
-            </p>
-
-            <p className="text-muted-foreground leading-relaxed">
-              La Medicina del Par Biomagnético representa un enfoque innovador y distinto a cualquier otro método médico conocido hasta ahora. Su objetivo es tratar las enfermedades que nos afectan mediante la aplicación de fuerzas magnéticas de intensidad moderada en puntos específicos del cuerpo, utilizando un enfoque bipolar y manteniendo una relación clara entre las fuerzas aplicadas.
-            </p>
-
-            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">
-                Par Biomagnético: Uno de los descubrimientos más importantes de la historia de la medicina
-              </h3>
-              <p className="text-muted-foreground">
-                El Par Biomagnético representa un avance significativo en la medicina energética. Se caracteriza por la corrección de los desequilibrios en la homeostasis del cuerpo mediante la aplicación de energías magnéticas de manera bipolar en puntos específicos durante un corto período de tiempo.
-              </p>
+          <div className="prose prose-slate max-w-none space-y-8">
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-1">
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  El Biomagnetismo es la disciplina que investiga el efecto de los campos magnéticos en los organismos vivos. Cuando aplicamos un campo magnético, interactuamos directamente con la bioelectricidad del cuerpo, influyendo en sustancias clave como el oxígeno y las proteínas.
+                </p>
+              </div>
+              <img 
+                src="img/biomagnetismo-medicina-del-futuro-ph.webp" 
+                alt="Interacción magnética celular" 
+                className="w-full md:w-64 rounded-2xl shadow-lg border border-slate-100"
+                width="250"
+                height="250"
+              />
             </div>
 
-            <h2 className="font-heading text-2xl font-bold text-foreground mt-12 mb-4">
-              Expansión y difusión del Par Biomagnético
-            </h2>
-
-            <p className="text-muted-foreground leading-relaxed">
-              En 1988, el Dr. Isaac Goiz Duran, tras una capacitación con el Dr. Broeringmeyer, propuso la aplicación de fuerzas magnéticas de forma bipolar, dando origen al concepto de Par Biomagnético. Este término describe las distorsiones energéticas en el cuerpo que se relacionan entre sí y surgen ante desequilibrios que provocan enfermedades.
+            <p className="text-slate-600 leading-relaxed">
+              Aunque el agua es diamagnética, las moléculas disueltas en ella son paramagnéticas y altamente sensibles. El enfoque del Par Biomagnético utiliza esta sensibilidad para influir en imanes monomoleculares del cuerpo, buscando restaurar la estabilidad perdida por el estrés o factores externos.
             </p>
 
-            <p className="text-muted-foreground leading-relaxed">
-              La corrección de estas alteraciones se realiza mediante fuerzas magnéticas que coincidan en signo con la distorsión, utilizando imanes de más de 1000 Gauss, lo que ha demostrado ser efectivo en diversas patologías.
-            </p>
+            {/* DIAGRAMA DE POLARIDAD */}
+            
 
-            <h2 className="font-heading text-2xl font-bold text-foreground mt-12 mb-4">
-              Médicos Históricos y el Magnetismo en la Salud
+            <div className="bg-emerald-900 text-white rounded-[2.5rem] p-8 md:p-12 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
+              <h2 className="text-2xl font-bold mb-6 text-emerald-400">¿En qué consiste esta técnica?</h2>
+              <p className="text-emerald-50/80 leading-relaxed mb-6">
+                A diferencia de otros métodos, el enfoque del Par Biomagnético es **bipolar**. Se aplican dos imanes de intensidad moderada (más de 1000 Gauss) en puntos específicos que presentan distorsiones energéticas. El objetivo es corregir el desequilibrio en la homeostasis mediante la neutralización de cargas.
+              </p>
+              <div className="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-widest">
+                <span className="bg-white/10 px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
+                   <Magnet size={14} /> Polo Norte (Negativo)
+                </span>
+                <span className="bg-white/10 px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
+                   <Zap size={14} /> Polo Sur (Positivo)
+                </span>
+              </div>
+            </div>
+
+            <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">
+              Evolución y Ciencia Energética
             </h2>
 
-            <ul className="space-y-4 text-muted-foreground">
-              <li><strong>Franz Mesmer:</strong> Considerado el pionero del magnetismo, desarrolló la teoría del "magnetismo animal".</li>
-              <li><strong>Samuel Hahnemann:</strong> Fundador de la homeopatía, se interesó en el magnetismo y su influencia en la salud.</li>
-              <li><strong>James Braid:</strong> Se interesó en el magnetismo antes de desarrollar su técnica de hipnosis.</li>
-              <li><strong>Richard von Krafft-Ebing:</strong> Psiquiatra que exploró el magnetismo en el contexto de la salud mental.</li>
-            </ul>
+            <p className="text-slate-600 leading-relaxed">
+              Propuesto originalmente en 1988 por el Dr. Isaac Goiz Durán, este método identifica "pares" de puntos en el cuerpo que se relacionan entre sí. Al equilibrar estos puntos, se busca crear un ambiente interno estable, menos propicio para la fatiga y el malestar general.
+            </p>
+
+            <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6 flex items-start gap-4">
+              <Info className="text-amber-600 shrink-0 mt-1" size={24} />
+              <div className="text-xs text-amber-900 leading-relaxed uppercase tracking-tight">
+                <strong>Nota Técnica:</strong> La aplicación de imanes se realiza de forma externa y sobre la ropa. Es una técnica de acompañamiento bionergético que se suma a la visión de figuras históricas como Mesmer o Hahnemann, quienes ya exploraban la influencia de las energías naturales en el ser humano.
+              </div>
+            </div>
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-primary rounded-2xl text-primary-foreground text-center">
-            <h3 className="font-heading text-2xl font-bold mb-4">¿Querés experimentar los beneficios del Biomagnetismo?</h3>
-            <p className="mb-6 opacity-90">Agenda tu consulta y comienza tu camino hacia el bienestar.</p>
-            <Button asChild className="bg-white text-primary hover:bg-white/90 rounded-full px-8">
-              <a href="https://wa.me/5493547446076?text=Hola,%20quisiera%20un%20turno%20para%20la%20terapia%20de%20biomagnetismo.%20Mi%20nombre%20es%20" target="_blank" rel="noopener noreferrer">
-                Agendar por WhatsApp <ArrowRight className="ml-2" size={18} />
-              </a>
+          {/* CTA SEGURO Y TRACKEADO */}
+          <div className="mt-16 p-10 bg-slate-900 rounded-[3rem] text-white text-center shadow-2xl">
+            <h3 className="text-2xl font-bold mb-4">¿Querés recuperar tu equilibrio energético?</h3>
+            <p className="mb-8 opacity-80 max-w-lg mx-auto">
+              Experimentá los beneficios de la homeostasis recuperada a través de una sesión presencial en Alta Gracia.
+            </p>
+            <Button 
+              onClick={handleWhatsAppTracking}
+              className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-full px-12 py-7 text-lg font-bold transition-all hover:scale-105"
+            >
+              Agendar vía WhatsApp <ArrowRight className="ml-2" />
             </Button>
+            <p className="mt-6 text-[10px] text-slate-500 uppercase tracking-widest">
+              Sesiones de bienestar complementario - No constituye tratamiento médico
+            </p>
           </div>
 
         </div>

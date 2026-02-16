@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemaps para que Google encuentre tus 38 flores y artículos
+Sitemap: https://biomagnetismo.store/sitemap.xml

@@ -6,26 +6,34 @@
 
 @layer base {
   :root {
-    --background: 50 20% 95%;
-    --foreground: 0 0% 10%;
+    /* Paleta de Bienestar: Neutros y Esmeralda Profundo */
+    --background: 50 20% 98%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-    --primary: 180 25% 25%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 30 41% 69%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 50 10% 90%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* El alma de la marca: Verde Sanación */
+    --primary: 161 94% 30%; 
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 160 52% 96%;
+    --secondary-foreground: 161 94% 30%;
+    
+    --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
-    --accent: 120 25% 65%;
-    --accent-foreground: 0 0% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 50 10% 88%;
-    --input: 50 10% 88%;
-    --ring: 180 25% 25%;
-    --radius: 0.75rem;
+    
+    --accent: 160 52% 96%;
+    --accent-foreground: 161 94% 30%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 161 94% 30%;
+    --radius: 1rem;
   }
 }
 
@@ -38,114 +46,57 @@
     font-family: 'Manrope', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold;
     font-family: 'Playfair Display', serif;
   }
 }
 
-/* Smooth scrolling */
+/* --- Mejoras de UX y Accesibilidad --- */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Scrollbar estilizado para no romper la estética */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--muted));
+  @apply bg-slate-50;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary) / 0.3);
-  border-radius: 4px;
+  @apply bg-slate-300 rounded-full border-4 border-solid border-slate-50 hover:bg-emerald-500 transition-colors;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.5);
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
+/* --- Utilidades de Animación --- */
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
-.animation-delay-100 {
-  animation-delay: 100ms;
+/* Glassmorphism para Navbar y Floating Cards */
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
 }
 
-.animation-delay-200 {
-  animation-delay: 200ms;
-}
-
-.animation-delay-300 {
-  animation-delay: 300ms;
-}
-
-.animation-delay-400 {
-  animation-delay: 400ms;
-}
-
-.animation-delay-500 {
-  animation-delay: 500ms;
-}
-
-/* WhatsApp Button Pulse */
-@keyframes pulse-ring {
-  0% {
-    transform: scale(0.8);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
+/* WhatsApp Conversion Pulse */
+.whatsapp-pulse {
+  position: relative;
 }
 
 .whatsapp-pulse::before {
   content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: #25D366;
-  animation: pulse-ring 1.5s ease-out infinite;
+  @apply absolute inset-0 rounded-full bg-[#25D366]/40 animate-ping;
   z-index: -1;
 }
 
-/* Glass effect */
-.glass {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-/* Debug wrapper */
-@layer base {
-  [data-debug-wrapper="true"] {
-    display: contents !important;
-  }
+/* Estructura para evitar Layout Shift (CLS) */
+.container-custom {
+  @apply max-w-7xl mx-auto px-6 w-full;
 }

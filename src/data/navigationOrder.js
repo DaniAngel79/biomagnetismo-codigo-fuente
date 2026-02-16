@@ -1,16 +1,30 @@
-// src/data/navigationOrder.js
+import { BACH_FLOWERS_DATA } from './bachFlowers';
+
 export const BIOMAGNETISMO_ORDER = [
-  { path: "/biomagnetismo", label: "¿Qué es?" },
-  { path: "/el-par-biomagnetico-que-es", label: "El Par Biomagnético" },
-  { path: "/origen-biomagnetismo", label: "Origen" },
-  { path: "/biomagnetismo-infantil", label: "Infantil" },
-  { path: "/campos-magneticos", label: "Campos Magnéticos" }, // Agregado según tu árbol
+  { path: "/biomagnetismo", label: "Guía de Biomagnetismo" },
+  { path: "/par-biomagnetico", label: "El Par Biomagnético" },
+  { path: "/origen-biomagnetismo", label: "Origen del Enfoque" },
+  { path: "/biomagnetismo-infantil", label: "Biomagnetismo Infantil" },
+  { path: "/campos-magneticos", label: "Campos Magnéticos" },
   { path: "/pares-temporales", label: "Pares Temporales" },
-  { path: "/alergias", label: "Alergias" }
+  { path: "/alergias", label: "Gestión de Alergias" }
 ];
 
 export const FLORES_ORDER = [
-  { path: "/flores-de-bach", label: "Información" },
-  { path: "/flores-de-bach/lista", label: "Las 38 Flores" },
-  { path: "/consultas-online", label: "Consultas" }
+  { path: "/flores-bach", label: "Terapia Floral" },
+  { path: "/catalogo-flores", label: "Catálogo de Flores" },
+  // Inyección dinámica de las 38 flores para navegación asistida
+  ...BACH_FLOWERS_DATA.map(flor => ({
+    path: `/flores-de-bach/${flor.id}`,
+    label: flor.name
+  })),
+  { path: "/consultas-online", label: "Consultas Online" }
+];
+
+// Secuencia Maestra para el FloatingNextNav
+export const GLOBAL_NAVIGATION_SEQUENCE = [
+  { path: "/", label: "Inicio" },
+  ...BIOMAGNETISMO_ORDER,
+  ...FLORES_ORDER,
+  { path: "/contacto", label: "Contacto" }
 ];
