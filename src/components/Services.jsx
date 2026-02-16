@@ -12,7 +12,7 @@ const Services = () => {
       title: "Equilibrio Biomagnético",
       description: "Aplicación de campos magnéticos estáticos para promover el confort físico y facilitar la relajación profunda del cuerpo.",
       benefits: ["Confort Físico", "Relajación", "Equilibrio"],
-      image: "/img/sesion-real.webp", // Sugerencia: Evita tildes en nombres de archivo (sesion vs sesión)
+      image: "/img/sesion-dr-goitz.webp", // Sugerencia: Evita tildes en nombres de archivo (sesion vs sesión)
       link: "/biomagnetismo"
     },
     {
