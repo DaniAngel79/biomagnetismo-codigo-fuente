@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { ArrowRight, Sparkles } from "lucide-react"; // Eliminamos ShieldCheck de aquí
+import { ArrowRight, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -9,14 +9,12 @@ const Hero = () => {
       className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white"
       data-testid="hero-section"
     >
-      {/* Elementos Decorativos de Fondo */}
       <div className="absolute top-40 -left-20 w-72 h-72 bg-emerald-50 rounded-full blur-3xl opacity-60" />
       <div className="absolute bottom-20 -right-20 w-96 h-96 bg-slate-100 rounded-full blur-3xl opacity-60" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
-          {/* Contenido de Texto */}
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full border border-emerald-100">
               <Sparkles size={16} />
@@ -34,7 +32,6 @@ const Hero = () => {
               armonía emocional y el confort físico de manera no invasiva.
             </p>
 
-            {/* Botones de Acción (CTA) */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 asChild
@@ -60,7 +57,6 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Indicadores de Confianza */}
             <div className="flex items-center gap-8 pt-6 border-t border-slate-100">
               <div>
                 <p className="text-3xl font-bold text-emerald-600 tracking-tighter">9+</p>
@@ -74,7 +70,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Imagen de Impacto */}
           <div className="relative">
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-slate-50">
               <img
@@ -88,10 +83,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent" />
             </div>
 
-            {/* Badge Flotante de Certificación */}
             <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-3xl shadow-2xl border border-emerald-50 flex items-center gap-4">
               <div className="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600">
-                {/* SVG Nativo inyectado para saltarnos la librería rota */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2-1 4-2 7-2 2.89 0 5.26 1 7 2a1 1 0 0 1 1 1v7z"/>
                   <path d="m9 12 2 2 4-4"/>
