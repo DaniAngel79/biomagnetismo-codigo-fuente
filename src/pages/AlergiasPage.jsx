@@ -55,7 +55,7 @@ const AlergiasPage = () => {
                 El Biomagnetismo identifica desequilibrios de pH que pueden estar influyendo en la respuesta exagerada del cuerpo ante el entorno. Buscamos restaurar la armonía sistémica.
               </p>
               <Button onClick={handleContact} className="bg-orange-600 hover:bg-orange-700 text-white px-10 py-7 rounded-2xl font-bold shadow-xl transition-all hover:scale-105">
-                Consultar Sesión de Evaluación <ArrowRight size={18} className="ml-2" />
+                Consultar Sesión de Biomagnetismo <ArrowRight size={18} className="ml-2" />
               </Button>
             </div>
             <div className="relative">
