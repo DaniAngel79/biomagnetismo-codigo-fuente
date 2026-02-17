@@ -1,4 +1,4 @@
-name: Despliegue Final Biomagnetismo
+name: Despliegue hacia el Final Biomagnetismo
 
 on:
   push:
